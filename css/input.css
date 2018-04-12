@@ -1,0 +1,120 @@
+body {
+  font-family: 'Tajawal', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.front-container {
+  background: url(../images/bgfixed2.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  color: white;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  top: 45%;
+  text-align: center;
+}
+.intro h1 {
+  font-size: 5em;
+  margin: 0;
+}
+.intro h2 {
+  font-size: 2em;
+}
+
+.down-arrow {
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  transition: all .2s ease-in-out;
+}
+.down-arrow:hover {
+  -webkit-transform: scaleY(1.2);
+  transform: scale(1.2);
+}
+.down-arrow a {
+  color: #C38D9E;
+}
+.down-arrow a:hover {
+  color: white;
+}
+
+.second-container {
+  background: linear-gradient(to bottom right, #41BEA3, #85CDCA);
+  display: flex;
+  height: 150px;
+  justify-content: space-around;
+}
+
+.navlinks {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-decoration: none;
+  height: 90%;
+  width: 20%;
+  font-size: 24px;
+  color: white;
+}
+.navlinks:hover {
+  -webkit-animation: opacity-in 1s ease-in-out;
+  animation: opacity-in 1s ease-in-out;
+}
+@-webkit-keyframes opacity-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacity-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.aboutlink:hover {
+  background: url(../images/gettoknowmefixed2.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.portlink:hover {
+  background: url(../images/seemyworkfixed2.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.contactlink:hover {
+  background: url(../images/contactmefixed.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .intro {
+    top: 25%;
+  }
+}
+
+/*# sourceMappingURL=input.css.map */
