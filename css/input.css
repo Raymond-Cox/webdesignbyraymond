@@ -56,6 +56,7 @@ body {
   height: 140px;
   justify-content: space-around;
   align-items: center;
+  position: static;
 }
 
 .link-container {
@@ -111,10 +112,35 @@ body {
   background-size: cover;
 }
 
-.third-container {
+.about-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "kayak about";
+  height: calc(100vh - 140px);
+  width: 100%;
+  background: linear-gradient(to top right, #85CDCA, #E8A87C);
+}
+
+.about-left {
+  grid-area: kayak;
   display: flex;
-  position: absolute;
-  left: -5000px;
+  align-items: center;
+}
+.about-left img {
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+}
+
+.about-right {
+  grid-area: about;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+}
+.about-right h1 {
+  font-family: 'Permanent Marker', cursive;
 }
 
 @media screen and (max-width: 768px) {
