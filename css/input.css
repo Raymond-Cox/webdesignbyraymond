@@ -53,8 +53,17 @@ body {
 .second-container {
   background: linear-gradient(to bottom right, #41BEA3, #85CDCA);
   display: flex;
-  height: 150px;
+  height: 140px;
   justify-content: space-around;
+  align-items: center;
+}
+
+.link-container {
+  display: flex;
+  align-items: center;
+  height: 120px;
+  width: 20%;
+  overflow: hidden;
 }
 
 .navlinks {
@@ -62,32 +71,23 @@ body {
   justify-content: center;
   align-items: flex-end;
   text-decoration: none;
-  height: 90%;
-  width: 20%;
+  height: 100%;
+  width: 100%;
   font-size: 24px;
   color: white;
+  -webkit-transition: all .5s ease-in;
+  -moz-transition: all .5s ease-in;
+  -o-transition: all .5s ease-in;
+  transition: all .5s ease-in;
 }
 .navlinks:hover {
-  -webkit-animation: opacity-in 1s ease-in-out;
-  animation: opacity-in 1s ease-in-out;
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
 }
-@-webkit-keyframes opacity-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes opacity-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.aboutlink:hover {
+
+.aboutlink {
   background: url(../images/gettoknowmefixed2.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -95,7 +95,7 @@ body {
   background-size: cover;
 }
 
-.portlink:hover {
+.portlink {
   background: url(../images/seemyworkfixed2.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -103,12 +103,18 @@ body {
   background-size: cover;
 }
 
-.contactlink:hover {
+.contactlink {
   background: url(../images/contactmefixed.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.third-container {
+  display: flex;
+  position: absolute;
+  left: -5000px;
 }
 
 @media screen and (max-width: 768px) {
