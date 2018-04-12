@@ -12,7 +12,7 @@
 
 <body>
   <!-- Front page -->
-  <div class="front-container">
+  <div class="front-container" id="first">
 
     <div class="intro">
       <h1>Raymond Cox</h1>
@@ -26,9 +26,9 @@
   <nav class="second-container" id="second">
       
       <div class="link-container">
-        <a href="#" class="navlinks aboutlink">Get to know me <br />
+        <div onclick=pageChange() class="navlinks aboutlink">Get to know me <br />
         <i class="fas fa-long-arrow-alt-right" data-fa-transform=" up-2" style="color: #E27D60;"></i>
-        </a>
+        </div>
       </div>
 
       <div class="link-container">
@@ -47,13 +47,59 @@
   </nav>
 
   <!--About Me-->
-  <div class="third-container" id="aboutme">
-    <div>
+  <div class="third-container" id="newpage">
+    <div class="animation" id="aboutme">
       <h2>wow</h2>
-    </div>
+    
     <h1> Hi, I'm Raymond</h1>
+    </div>
   </div>
 
+  <script>
+
+    function pageChange() {
+
+    var elem = document.getElementById("aboutme");
+    var aboutme = document.getElementById('newpage');
+    var landing = document.getElementById('first');
+    var nav = document.getElementById('second');
+    
+    sceneTransition();
+    setTimeout(myMove(), 1000);
+
+  function sceneTransition() {
+    landing.style.position = "absolute";
+    frameright();
+    function frameright() {
+      var pos = 0;
+      if (pos == 500) {
+        clearInterval(id);
+      } else {
+        pos++;
+        landing.style.left = pos + 'px';
+      }
+      console.log("Moving Right");
+    }
+  }
+  
+  function myMove() {
+      var pos = -500;
+      var id = setInterval(frame, 5);
+
+      aboutme.style.display = "flex";
+
+      function frame() {
+        if (pos == 0) {
+          clearInterval(id);
+        } else {
+          pos++;
+          elem.style.left = pos + 'px';
+        }
+        console.log("Test");
+      }
+    }
+  }
+  </script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
   crossorigin="anonymous"></script>
 </body>
