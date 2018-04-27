@@ -1,3 +1,15 @@
+.perm-marker {
+  font-family: 'Permanent Marker', cursive;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.center {
+  text-align: center;
+}
+
 body {
   font-family: 'Tajawal', sans-serif;
   margin: 0;
@@ -24,6 +36,7 @@ body {
   width: 100%;
   top: 45%;
   text-align: center;
+  cursor: context-menu;
 }
 .intro h1 {
   font-size: 5em;
@@ -37,14 +50,17 @@ body {
   position: absolute;
   bottom: 2%;
   right: 2%;
+}
+.down-arrow i {
   transition: all .2s ease-in-out;
 }
-.down-arrow:hover {
+.down-arrow i:hover {
   -webkit-transform: scaleY(1.2);
   transform: scale(1.2);
 }
 .down-arrow a {
   color: #C38D9E;
+  cursor: pointer;
 }
 .down-arrow a:hover {
   color: white;
@@ -64,6 +80,7 @@ body {
   align-items: center;
   height: 120px;
   width: 20%;
+  cursor: pointer;
   overflow: hidden;
 }
 
@@ -76,10 +93,10 @@ body {
   width: 100%;
   font-size: 24px;
   color: white;
-  -webkit-transition: all .5s ease-in;
-  -moz-transition: all .5s ease-in;
-  -o-transition: all .5s ease-in;
-  transition: all .5s ease-in;
+  -webkit-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
 }
 .navlinks:hover {
   -webkit-transform: scale(1.05);
@@ -139,8 +156,94 @@ body {
   align-items: center;
   margin-top: 10%;
 }
-.about-right h1 {
-  font-family: 'Permanent Marker', cursive;
+
+.portfolio-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px;
+  grid-template-areas: "ptitle ptitle" "work1 work2" "work3 work4" "arrow arrow";
+  min-height: calc(100vh - 140px);
+  max-width: 100%;
+  background: linear-gradient(to top right, #85CDCA, #E8A87C);
+  padding: 2%;
+}
+
+.port-title {
+  grid-area: ptitle;
+  display: flex;
+  justify-content: center;
+}
+
+.work-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 2%;
+}
+.work-container img {
+  height: auto;
+  width: 100%;
+}
+.work-container img:hover {
+  opacity: .7;
+}
+
+.up-arrow {
+  grid-area: arrow;
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  width: 10%;
+}
+.up-arrow i {
+  transition: all .2s ease-in-out;
+}
+.up-arrow i:hover {
+  -webkit-transform: scaleY(1.2);
+  transform: scale(1.2);
+}
+.up-arrow a {
+  color: #C38D9E;
+  cursor: pointer;
+}
+.up-arrow a:hover {
+  color: white;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "me contact";
+  height: calc(100vh - 140px);
+  width: 100%;
+  background: linear-gradient(to top right, #85CDCA, #E8A87C);
+}
+
+.contact-left {
+  grid-area: me;
+  display: flex;
+  align-items: center;
+}
+.contact-left img {
+  height: auto;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.contact-right {
+  grid-area: contact;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+}
+.contact-right a {
+  font-size: 22px;
+  color: #45a7a3;
+  text-decoration: none;
+}
+.contact-right a:hover {
+  color: #368380;
 }
 
 @media screen and (max-width: 768px) {

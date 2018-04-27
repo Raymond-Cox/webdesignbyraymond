@@ -44,20 +44,36 @@ body {
 .second-container {
   background: linear-gradient(to bottom right, #41BEA3, #85CDCA);
   display: flex;
-  height: 150px;
-  justify-content: space-around; }
+  height: 140px;
+  justify-content: space-around;
+  align-items: center;
+  position: static; }
+
+.link-container {
+  display: flex;
+  align-items: center;
+  height: 120px;
+  width: 20%;
+  overflow: hidden; }
 
 .navlinks {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   text-decoration: none;
-  height: 90%;
-  width: 20%;
+  height: 100%;
+  width: 100%;
   font-size: 24px;
-  color: white; }
+  color: white;
+  -webkit-transition: all .5s ease-in;
+  -moz-transition: all .5s ease-in;
+  -o-transition: all .5s ease-in;
+  transition: all .5s ease-in; }
   .navlinks:hover {
-    transform: scale(1.1); }
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05); }
 
 .aboutlink {
   background: url(../images/gettoknowmefixed2.jpg) no-repeat center center;
@@ -65,8 +81,6 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
-  .aboutlink:hover {
-    color: white; }
 
 .portlink {
   background: url(../images/seemyworkfixed2.jpg) no-repeat center center;
@@ -81,6 +95,32 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
+
+.about-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "kayak about";
+  height: calc(100vh - 140px);
+  width: 100%;
+  background: linear-gradient(to top right, #85CDCA, #E8A87C); }
+
+.about-left {
+  grid-area: kayak;
+  display: flex;
+  align-items: center; }
+  .about-left img {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto; }
+
+.about-right {
+  grid-area: about;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%; }
+  .about-right h1 {
+    font-family: 'Permanent Marker', cursive; }
 
 @media screen and (max-width: 768px) {
   .intro {

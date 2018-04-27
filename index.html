@@ -19,27 +19,27 @@
       <h2>Technology guru, Nature lover, Travelling enthusiast</h2>
     </div>
     <div class="fa-4x down-arrow">
-      <a href="#second"><i class="far fa-arrow-alt-circle-down"></i></a>
+      <a onclick="smoothScroll()"><i class="far fa-arrow-alt-circle-down"></i></a>
     </div>
   </div>
   <!-- Nav bar -->
   <nav class="second-container" id="second">
       
       <div class="link-container">
-        <a href="#" class="navlinks aboutlink">Get to know me <br />
+        <a onclick="changeTab(event, 'about')" class="navlinks aboutlink" id="defaultOpen">Get to know me <br />
         <i class="fas fa-long-arrow-alt-right" data-fa-transform=" up-2" style="color: #E27D60;"></i>
         </a>
       </div>
 
       <div class="link-container">
-        <a href="#" class="navlinks portlink">See my work
+        <a onclick="changeTab(event, 'portfolio')" class="navlinks portlink">See my work
         <br />
         <i class="fas fa-long-arrow-alt-right" data-fa-transform=" up-2" style="color: #C38D9E;"></i>
         </a>
       </div>
       
       <div class="link-container">
-        <a href="#" class="navlinks contactlink">Get in touch with me
+        <a onclick="changeTab(event, 'contact')" class="navlinks contactlink">Get in touch with me
         <br />
         <i class="fas fa-long-arrow-alt-right" data-fa-transform=" up-2" style="color: #E8A87C;"></i>
         </a>
@@ -47,16 +47,109 @@
   </nav>
 
   <!--About Me-->
-  <div class="about-container" id="aboutme">
+  <div class="about-container tabcontent" id="about">
     <div class="about-right">
-      <h1>About Me</h1>
-      <h2>I am lorem ipsum</h2>
+      <h1 class="perm-marker">About Me</h1>
+      <h2>When it's warm outside you could expect to find me and my kayak in local waters.    In winter months I'll probably be at my computer day-dreaming of warmer days and better places.
+      Having worked construction most of my life, I love crafting things with my hands.  Since transitioning to programming I've brought that same desire to build, now with my mind.</h2>
     </div>
     <div class="about-left">
       <img src="/images/kayak.jpg" />
     </div>
   </div>
 
+  <!--See My Work-->
+  <div class="portfolio-container tabcontent" id="portfolio">
+    <div class="port-title">
+      <h1 class="perm-marker">Portfolio</h1>
+    </div>
+
+    <div class="work-container">
+      <a href="https://gecho.herokuapp.com/" target="_blank"><img src="/images/gechopreview.jpg" /></a>
+      <h1 class="underline">Gecho</h1>
+      <h2 class="center">A Youtube-lite video app with database and user storage. Remote-dev team project for Chingu Voyage-4</h2>
+      <h3>Framework: React (MERN stack) <br />
+      Languages used: HTML/CSS/JavaScript</h3>
+    </div>
+
+    <div class="work-container">
+      <a href="http://www.cindoco.com" target="_blank">
+        <img src="/images/cindocopreview.jpg" />
+      </a>
+      <h1 class="underline">Cindoco</h1>
+      <h2 class="center">Complete redesign and rewrite for local company Cindoco.</h2>
+      <h3>Languages used: HTML/CSS/JavaScript</h3>
+    </div>
+
+    <div class="work-container">
+      <a href="http://www.fortitudephotography.com" target="_blank">
+        <img src="/images/fortitudepreview.jpg" />
+      </a>
+      <h1 class="underline">Fortitude Photography</h1>
+      <h2 class="center">(In Progress)New website build for photography business.</h2>
+      <h3>Languages used: HTML/CSS/JavaScript</h3>
+    </div>
+
+    <div class="work-container">
+      <a href="https://chingu-voyage3.github.io/toucans-04/" target="_blank">
+        <img src="/images/atomistpreview.jpg" />
+      </a>
+      <h1 class="underline">Atomist Clone</h1>
+      <h2 class="center">A clone of the existing Atomist website, built for remote-dev collaborative experience for Chingu Voyage-3.</h2>
+      <h3>Languages used: HTML/CSS/JavaScript</h3>
+    </div>
+
+    <div class="fa-4x up-arrow">
+      <a onclick="smoothScroll()">
+        <i class="far fa-arrow-alt-circle-up"></i>
+      </a>
+    </div>
+  </div>
+
+  <!--Contact-->
+  <div class="contact-container tabcontent" id="contact">
+    <div class="contact-right">
+      <h1 class="perm-marker">Contact Me</h1>
+      <h2>Feel free to reach out to me, I would love to work together!</h2>
+      <h3><i class="fa-2x far fa-envelope" data-fa-transform=" down-3"></i><a href="mailto:raymondc@webdesignbyraymond.com" target="_top"> raymondc@webdesignbyraymond.com</a></h3>
+    </div>
+    <div class="contact-left">
+      <img src="/images/profileimg.jpg" />
+    </div>
+  </div>
+
+<script>
+  function changeTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+
+    /*Hides all elements with class="tabcontent" */
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+
+        /*Get all elements with class="tablinks" and remove the class "active"*/
+        tablinks = document.getElementsByClassName("navlinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active1", "");
+        }
+
+        /*Show the current tab, and add an "active" class to the button that opened the tab*/
+        document.getElementById(tabName).style.display = "grid";
+        evt.currentTarget.className += " active1";
+      }
+      /*Set first tab to active on pageload*/
+      document.getElementById("defaultOpen").click();
+
+  function smoothScroll() {
+    document.getElementById('second').scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest'
+    });
+  }
+
+</script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
   crossorigin="anonymous"></script>
 </body>
