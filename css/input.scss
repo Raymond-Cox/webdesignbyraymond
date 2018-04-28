@@ -32,6 +32,10 @@ body {
 // Landing //
 
 .front-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
   background: url(../images/bgfixed2.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -62,22 +66,16 @@ body {
   }
 }
 .down-arrow {
-  position: absolute;
-  bottom: 2%;
-  right: 2%;
-  i {
-  transition: all .2s ease-in-out;
-  &:hover {
-  -webkit-transform: scaleY(1.2);
-  transform: scale(1.2);
-  }
-  }
+  position: relative;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
   a {
     color: $accent-salmon;
     cursor: pointer;
+    transition: all .2s ease-in-out;
+
     &:hover {
       color: white;
-      
     }
   }
 }
@@ -102,6 +100,8 @@ body {
   width: 20%;
   cursor: pointer;
   overflow: hidden;
+  outline: 1px solid $terracotta;
+  box-shadow: 0px 0px 10px 2px black;
 }
 .navlinks {
   display: flex;
@@ -166,6 +166,7 @@ body {
   img {
     width: 80%;
     height: 80%;
+    box-shadow: 2px 2px 15px 2px grey;
     margin: 0 auto;
   }
 }
@@ -193,6 +194,8 @@ body {
   max-width: 100%;
   background: linear-gradient(to top right, $accent-blue, $terracotta);
   padding: 2%;
+  z-index: -1;
+  transition: .5s all ease-in;
 }
 .port-title {
   grid-area: ptitle;
@@ -204,33 +207,49 @@ body {
   flex-direction: column;
   align-items: center;
   margin: 0 2%;
+  z-index: 2;
+  a {
+    color: darken($accent-salmon, 20%);
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+    &:hover {
+      color: darken($accent-salmon, 30%);
+    }
+  }
   img {
     height: auto;
     width: 100%;
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
     &:hover {
-      opacity: .7;
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    box-shadow: 10px 10px 30px grey;
     }
   }
 }
+
 .up-arrow {
   grid-area: arrow;
   display: flex;
   justify-self: center;
   justify-content: center;
   width: 10%;
-  i {
-  transition: all .2s ease-in-out;
-  &:hover {
-  -webkit-transform: scaleY(1.2);
-  transform: scale(1.2);
-  }
-  }
+  position: relative;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
   a {
     color: $accent-salmon;
     cursor: pointer;
+    transition: all .2s ease-in-out;
     &:hover {
       color: white;
-      
     }
   }
 }
@@ -244,17 +263,33 @@ body {
   "me contact";
   height: calc(100vh - 140px);
   width: 100%;
+  padding: 2%;
   background: linear-gradient(to top right, $accent-blue, $terracotta);
 }
 .contact-left {
   grid-area: me;
   display: flex;
+  flex-direction: column;
   align-items: center;
   img {
+    position: relative;
+    top: 100px;
+    z-index: 1;
     height: auto;
     width: 80%;
     margin: 0 auto;
   }
+}
+.flex-rectangle{
+    width: 80%;
+    border: 4px solid darken($accent-darkblue, 10%);
+    margin-top: -35%;
+    margin-left: 10%;
+}
+.flex-rectangle:before{
+    content: "";
+    display: block;
+    padding-top: 70%;
 }
 .contact-right {
   grid-area: contact;
@@ -262,22 +297,43 @@ body {
   flex-direction: column;
   align-items: center;
   margin-top: 10%;
+  z-index: 1;
   a {
     font-size: 22px;
-    color: darken($accent-blue, 20%);
+    color: darken($accent-darkblue, 10%);
     text-decoration: none;
     &:hover {
-      color: darken($accent-blue, 30%);
+      color: darken($accent-darkblue, 20%);
     }
   }
 }
-
+.flex-square{
+    position: relative;
+    width: 50%;
+    z-index: -1;
+    bottom: 350px;
+    background-color: $accent-salmon;
+    transform: rotate(45deg);
+    transform-origin: 0 75%;
+}
+.flex-square:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+    
+}
 @media screen and (max-width: 768px) {
   .intro {
     top: 25%;
   }
 }
 
+
+@keyframes bounce {
+  0% {top: 0px;}
+  50% {top: -10px;}
+  100% {top: 0px;}
+}
 //   -webkit-animation: opacity-in 1s ease-in-out;
 //   animation: opacity-in 1s ease-in-out;
 //   }
