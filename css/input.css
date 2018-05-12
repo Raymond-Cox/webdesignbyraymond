@@ -53,12 +53,17 @@ body {
 .down-arrow {
   position: relative;
   -webkit-animation: bounce 2s infinite;
+  -moz-animation: bounce 2s infinite;
+  -o-animation: bounce 2s infinite;
   animation: bounce 2s infinite;
 }
 .down-arrow a {
   color: #C38D9E;
   cursor: pointer;
   transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
 }
 .down-arrow a:hover {
   color: white;
@@ -133,7 +138,7 @@ body {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-areas: "kayak about";
-  height: calc(100vh - 140px);
+  min-height: calc(100vh - 140px);
   width: 100%;
   background: linear-gradient(to top right, #85CDCA, #E8A87C);
 }
@@ -141,11 +146,15 @@ body {
 .about-left {
   grid-area: kayak;
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 .about-left img {
+  position: relative;
+  top: 100px;
+  z-index: 1;
   width: 80%;
-  height: 80%;
+  height: auto;
   box-shadow: 2px 2px 15px 2px grey;
   margin: 0 auto;
 }
@@ -156,6 +165,7 @@ body {
   flex-direction: column;
   align-items: center;
   margin-top: 10%;
+  z-index: 1;
 }
 
 .portfolio-container {
@@ -169,6 +179,9 @@ body {
   padding: 2%;
   z-index: -1;
   transition: .5s all ease-in;
+  -webkit-transition: .5s all ease-in;
+  -moz-transition: .5s all ease-in;
+  -o-transition: .5s all ease-in;
 }
 
 .port-title {
@@ -183,6 +196,7 @@ body {
   align-items: center;
   margin: 0 2%;
   z-index: 2;
+  text-align: center;
 }
 .work-container a {
   color: #995168;
@@ -218,12 +232,17 @@ body {
   width: 10%;
   position: relative;
   -webkit-animation: bounce 2s infinite;
+  -moz-animation: bounce 2s infinite;
+  -o-animation: bounce 2s infinite;
   animation: bounce 2s infinite;
 }
 .up-arrow a {
   color: #C38D9E;
   cursor: pointer;
   transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
 }
 .up-arrow a:hover {
   color: white;
@@ -233,9 +252,8 @@ body {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-areas: "me contact";
-  height: calc(100vh - 140px);
-  width: 100%;
-  padding: 2%;
+  min-height: calc(100vh - 140px);
+  max-width: 100%;
   background: linear-gradient(to top right, #85CDCA, #E8A87C);
 }
 
@@ -279,6 +297,11 @@ body {
   font-size: 22px;
   color: #349882;
   text-decoration: none;
+  transition: color .5s ease-in;
+  -webkit-transition: color .5s ease-in;
+  -moz-transition: color .5s ease-in;
+  -o-transition: color .5s ease-in;
+  word-wrap: break-word;
 }
 .contact-right a:hover {
   color: #277262;
@@ -291,7 +314,13 @@ body {
   bottom: 350px;
   background-color: #C38D9E;
   transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
   transform-origin: 0 75%;
+  -webkit-transform-origin: 0 75%;
+  -moz-transform-origin: 0 75%;
+  -o-transform-origin: 0 75%;
 }
 
 .flex-square:before {
@@ -300,9 +329,90 @@ body {
   padding-top: 100%;
 }
 
+.social-media-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 75%;
+}
+
+.social-media {
+  display: flex;
+  height: 47px;
+  width: 50px;
+  box-shadow: 3px 8px 15px grey;
+}
+.social-media a {
+  height: 100%;
+  width: 100%;
+  color: white;
+  background-color: #349882;
+  border-radius: 5px;
+  border: 3px solid transparent;
+  transition: all .3s ease-in;
+  -webkit-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+}
+.social-media a:hover {
+  color: white;
+  background-color: #277262;
+  border: 3px solid white;
+}
+
+@media screen and (max-width: 1250px) {
+  .link-container {
+    width: 30%;
+  }
+}
 @media screen and (max-width: 768px) {
   .intro {
     top: 25%;
+  }
+
+  .second-container {
+    flex-direction: column;
+    height: 350px;
+  }
+
+  .link-container {
+    height: 100px;
+    width: 80%;
+  }
+
+  .about-container {
+    grid-template-columns: 100%;
+    grid-template-areas: "kayak" "about";
+  }
+
+  .about-left img {
+    top: 10%;
+    height: 95%;
+    width: 80%;
+  }
+
+  .about-right {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 2%;
+  }
+
+  .portfolio-container {
+    grid-template-columns: 100%;
+    grid-template-areas: "ptitle" "work1" "work2" "work3" "work4" "arrow";
+  }
+
+  .contact-container {
+    grid-template-columns: 100%;
+    grid-template-areas: "me" "contact";
+    height: auto;
+  }
+}
+@media screen and (max-width: 550px) {
+  .intro h1 {
+    font-size: 3.5em;
+  }
+  .intro h2 {
+    font-size: 1.5em;
   }
 }
 @keyframes bounce {
