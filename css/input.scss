@@ -13,6 +13,8 @@ $accent-blue: #85CDCA;
 $accent-salmon: #C38D9E;
 $accent-darkblue: #41BEA3;
 
+$proto-green: #C2EDE4;
+
 .perm-marker {
 font-family: 'Permanent Marker', cursive;
 }
@@ -162,7 +164,7 @@ body {
   "kayak about";
   min-height: calc(100vh - 140px);
   width: 100%;
-  background: linear-gradient(to top right, $accent-blue, $terracotta);
+  background: linear-gradient(to top right, $proto-green, $terracotta);
 }
 .about-left {
   grid-area: kayak;
@@ -202,7 +204,7 @@ body {
   "arrow arrow";
   min-height: calc(100vh - 140px);
   max-width: 100%;
-  background: linear-gradient(to top right, $accent-blue, $terracotta);
+  background: linear-gradient(to top right, $proto-green, $terracotta);
   padding: 2%;
   z-index: -1;
   transition: .5s all ease-in;
@@ -282,7 +284,7 @@ body {
   "me contact";
   min-height: calc(100vh - 140px);
   max-width: 100%;
-  background: linear-gradient(to top right, $accent-blue, $terracotta);
+  background: linear-gradient(to top right, $proto-green, $terracotta);
 }
 .contact-left {
   grid-area: me;

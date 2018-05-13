@@ -140,7 +140,7 @@ body {
   grid-template-areas: "kayak about";
   min-height: calc(100vh - 140px);
   width: 100%;
-  background: linear-gradient(to top right, #85CDCA, #E8A87C);
+  background: linear-gradient(to top right, #C2EDE4, #E8A87C);
 }
 
 .about-left {
@@ -175,7 +175,7 @@ body {
   grid-template-areas: "ptitle ptitle" "work1 work2" "work3 work4" "arrow arrow";
   min-height: calc(100vh - 140px);
   max-width: 100%;
-  background: linear-gradient(to top right, #85CDCA, #E8A87C);
+  background: linear-gradient(to top right, #C2EDE4, #E8A87C);
   padding: 2%;
   z-index: -1;
   transition: .5s all ease-in;
@@ -254,7 +254,7 @@ body {
   grid-template-areas: "me contact";
   min-height: calc(100vh - 140px);
   max-width: 100%;
-  background: linear-gradient(to top right, #85CDCA, #E8A87C);
+  background: linear-gradient(to top right, #C2EDE4, #E8A87C);
 }
 
 .contact-left {
