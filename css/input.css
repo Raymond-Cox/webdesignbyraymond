@@ -168,6 +168,15 @@ body {
   z-index: 1;
 }
 
+.technologies {
+  display: inline;
+}
+
+.fix {
+  position: relative;
+  bottom: 35%;
+}
+
 .portfolio-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -365,6 +374,11 @@ body {
     width: 30%;
   }
 }
+@media screen and (max-width: 1150px) {
+  .fix {
+    bottom: 20%;
+  }
+}
 @media screen and (max-width: 768px) {
   .intro {
     top: 25%;
@@ -414,6 +428,15 @@ body {
   }
   .intro h2 {
     font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 450px) {
+  .fix {
+    bottom: 10%;
+  }
+
+  .social-media-container {
+    width: 95%;
   }
 }
 @keyframes bounce {
