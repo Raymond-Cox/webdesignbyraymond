@@ -254,7 +254,7 @@ body {
   grid-template-areas: "me contact";
   min-height: calc(100vh - 140px);
   max-width: 100%;
-  background: linear-gradient(to top right, #C2EDE4, #E8A87C);
+  background: linear-gradient(to bottom right, #C2EDE4, #E8A87C);
 }
 
 .contact-left {
