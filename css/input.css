@@ -70,7 +70,7 @@ body {
 }
 
 .second-container {
-  background: linear-gradient(to bottom right, #41BEA3, #85CDCA);
+  background: linear-gradient(to top right, #E8A87C, #85CDCA);
   display: flex;
   height: 140px;
   justify-content: space-around;
@@ -85,7 +85,7 @@ body {
   width: 20%;
   cursor: pointer;
   overflow: hidden;
-  outline: 1px solid #E8A87C;
+  outline: 1px solid #b16c82;
   box-shadow: 0px 0px 10px 2px black;
 }
 
@@ -140,7 +140,7 @@ body {
   grid-template-areas: "kayak about";
   min-height: calc(100vh - 140px);
   width: 100%;
-  background: linear-gradient(to top right, #C2EDE4, #E8A87C);
+  background: linear-gradient(to right, #84C7BE, #7AC2AC);
 }
 
 .about-left {
@@ -175,7 +175,7 @@ body {
   grid-template-areas: "ptitle ptitle" "work1 work2" "work3 work4" "arrow arrow";
   min-height: calc(100vh - 140px);
   max-width: 100%;
-  background: linear-gradient(to top right, #C2EDE4, #E8A87C);
+  background: linear-gradient(to right, #84C7BE, #7AC2AC);
   padding: 2%;
   z-index: -1;
   transition: .5s all ease-in;
@@ -199,14 +199,14 @@ body {
   text-align: center;
 }
 .work-container a {
-  color: #995168;
+  color: #b16c82;
   -webkit-transition: all .3s ease-in;
   -moz-transition: all .3s ease-in;
   -o-transition: all .3s ease-in;
   transition: all .3s ease-in;
 }
 .work-container a:hover {
-  color: #783f51;
+  color: #995168;
 }
 .work-container img {
   height: auto;
@@ -254,7 +254,7 @@ body {
   grid-template-areas: "me contact";
   min-height: calc(100vh - 140px);
   max-width: 100%;
-  background: linear-gradient(to bottom right, #C2EDE4, #E8A87C);
+  background: linear-gradient(to right, #84C7BE, #7AC2AC);
 }
 
 .contact-left {
@@ -275,7 +275,7 @@ body {
 
 .flex-rectangle {
   width: 80%;
-  border: 4px solid #349882;
+  border: 4px solid #b16c82;
   margin-top: -35%;
   margin-left: 10%;
 }
@@ -296,7 +296,7 @@ body {
 }
 .contact-right a {
   font-size: 22px;
-  color: #349882;
+  color: #E27D60;
   text-decoration: none;
   transition: color .5s ease-in;
   -webkit-transition: color .5s ease-in;
@@ -305,7 +305,7 @@ body {
   word-wrap: break-word;
 }
 .contact-right a:hover {
-  color: #277262;
+  color: white;
 }
 
 .flex-square {
@@ -313,7 +313,7 @@ body {
   width: 50%;
   z-index: -1;
   bottom: 350px;
-  background-color: #C38D9E;
+  background-color: #349882;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -340,13 +340,13 @@ body {
   display: flex;
   height: 47px;
   width: 50px;
-  box-shadow: 3px 8px 15px grey;
+  box-shadow: 3px 8px 15px black;
 }
 .social-media a {
   height: 100%;
   width: 100%;
   color: white;
-  background-color: #349882;
+  background-color: #E27D60;
   border-radius: 5px;
   border: 3px solid transparent;
   transition: all .3s ease-in;
@@ -356,7 +356,7 @@ body {
 }
 .social-media a:hover {
   color: white;
-  background-color: #277262;
+  background-color: #da5a35;
   border: 3px solid white;
 }
 

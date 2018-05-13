@@ -12,8 +12,8 @@ $accent-orange: #E27D60;
 $accent-blue: #85CDCA;
 $accent-salmon: #C38D9E;
 $accent-darkblue: #41BEA3;
-
-$proto-green: #C2EDE4;
+$proto-green: #84C7BE;
+$proto-green2: #7AC2AC;
 
 .perm-marker {
 font-family: 'Permanent Marker', cursive;
@@ -93,7 +93,7 @@ body {
 ////////////
 // Navbar //
 .second-container {
-  background: linear-gradient(to bottom right, $accent-darkblue, $accent-blue);
+  background: linear-gradient(to top right, $terracotta,  $accent-blue); 
   display: flex;
   height: 140px;
   justify-content: space-around;
@@ -107,7 +107,7 @@ body {
   width: 20%;
   cursor: pointer;
   overflow: hidden;
-  outline: 1px solid $terracotta;
+  outline: 1px solid darken($accent-salmon, 10%);
   box-shadow: 0px 0px 10px 2px black;
 }
 .navlinks {
@@ -164,7 +164,7 @@ body {
   "kayak about";
   min-height: calc(100vh - 140px);
   width: 100%;
-  background: linear-gradient(to top right, $proto-green, $terracotta);
+  background: linear-gradient(to right, $proto-green, $proto-green2);
 }
 .about-left {
   grid-area: kayak;
@@ -204,7 +204,7 @@ body {
   "arrow arrow";
   min-height: calc(100vh - 140px);
   max-width: 100%;
-  background: linear-gradient(to top right, $proto-green, $terracotta);
+  background: linear-gradient(to right, $proto-green, $proto-green2);
   padding: 2%;
   z-index: -1;
   transition: .5s all ease-in;
@@ -225,13 +225,13 @@ body {
   z-index: 2;
   text-align: center;
   a {
-    color: darken($accent-salmon, 20%);
+    color: darken($accent-salmon, 10%);
     -webkit-transition: all .3s ease-in;
     -moz-transition: all .3s ease-in;
     -o-transition: all .3s ease-in;
     transition: all .3s ease-in;
     &:hover {
-      color: darken($accent-salmon, 30%);
+      color: darken($accent-salmon, 20%);
     }
   }
   img {
@@ -284,7 +284,7 @@ body {
   "me contact";
   min-height: calc(100vh - 140px);
   max-width: 100%;
-  background: linear-gradient(to bottom right, $proto-green, $terracotta);
+  background: linear-gradient(to right, $proto-green, $proto-green2);
 }
 .contact-left {
   grid-area: me;
@@ -303,7 +303,8 @@ body {
 }
 .flex-rectangle{
     width: 80%;
-    border: 4px solid darken($accent-darkblue, 10%);
+    // border: 4px solid darken($accent-darkblue, 10%);
+    border: 4px solid darken($accent-salmon, 10%);
     margin-top: -35%;
     margin-left: 10%;
 }
@@ -322,7 +323,8 @@ body {
 
   a {
     font-size: 22px;
-    color: darken($accent-darkblue, 10%);
+    // color: darken($accent-darkblue, 10%);
+    color: $accent-orange;
     text-decoration: none;
     transition: color .5s ease-in;
     -webkit-transition: color .5s ease-in;
@@ -330,7 +332,7 @@ body {
     -o-transition: color .5s ease-in;
     word-wrap: break-word;
     &:hover {
-      color: darken($accent-darkblue, 20%);
+      color: white;
     }
   }
 }
@@ -343,7 +345,7 @@ body {
     width: 50%;
     z-index: -1;
     bottom: 350px;
-    background-color: $accent-salmon;
+    background-color: darken($accent-darkblue, 10%);
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -369,14 +371,14 @@ body {
   display: flex;
   height: 47px;
   width: 50px;
-  box-shadow: 3px 8px 15px grey;
+  box-shadow: 3px 8px 15px black;
 
   
   & a {
     height: 100%;
     width: 100%;
     color: white;
-    background-color: darken($accent-darkblue, 10%);
+    background-color: $accent-orange;
     border-radius: 5px;
     border: 3px solid transparent;
     transition: all .3s ease-in;
@@ -385,7 +387,7 @@ body {
     -o-transition: all .3s ease-in;
     &:hover {
       color: white;
-      background-color: darken($accent-darkblue, 20%);
+      background-color: darken($accent-orange, 10%);
       border: 3px solid white;
     }
   }
