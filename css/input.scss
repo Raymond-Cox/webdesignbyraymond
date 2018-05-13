@@ -5,7 +5,7 @@
 // font-family: 'Gugi', cursive;
 // font-family: 'PT Sans Narrow', sans-serif;
 // font-family: 'Permanent Marker', cursive;
-
+// font-family: 'Poppins', sans-serif;
 // Colors //
 $terracotta: #E8A87C;
 $accent-orange: #E27D60;
@@ -16,7 +16,7 @@ $proto-green: #84C7BE;
 $proto-green2: #7AC2AC;
 
 .perm-marker {
-font-family: 'Permanent Marker', cursive;
+font-family: 'Poppins', sans-serif;
 }
 .underline {
   text-decoration: underline;
@@ -93,12 +93,13 @@ body {
 ////////////
 // Navbar //
 .second-container {
-  background: linear-gradient(to bottom, $terracotta,  $proto-green); 
+  background: darken($accent-darkblue, 10%);
   display: flex;
   height: 140px;
   justify-content: space-around;
   align-items: center;
   position: static;
+
 }
 .link-container {
   display: flex;
@@ -107,7 +108,7 @@ body {
   width: 20%;
   cursor: pointer;
   overflow: hidden;
-  outline: 1px solid darken($accent-salmon, 10%);
+  outline: 1px solid darken($accent-darkblue, 10%);
   box-shadow: 0px 0px 10px 2px black;
 }
 .navlinks {
