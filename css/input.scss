@@ -74,7 +74,7 @@ body {
   -o-animation: bounce 2s infinite;
   animation: bounce 2s infinite;
   a {
-    color: $accent-salmon;
+    color: darken($accent-salmon, 10%);
     cursor: pointer;
     transition: all .2s ease-in-out;
     -webkit-transition: all .2s ease-in-out;
@@ -93,7 +93,7 @@ body {
 ////////////
 // Navbar //
 .second-container {
-  background: linear-gradient(to top right, $terracotta,  $accent-blue); 
+  background: linear-gradient(to bottom, $terracotta,  $proto-green); 
   display: flex;
   height: 140px;
   justify-content: space-around;
@@ -263,7 +263,7 @@ body {
   -o-animation: bounce 2s infinite;
   animation: bounce 2s infinite;
   a {
-    color: $accent-salmon;
+    color: darken($accent-salmon, 10%);
     cursor: pointer;
     transition: all .2s ease-in-out;
     -webkit-transition: all .2s ease-in-out;

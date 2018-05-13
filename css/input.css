@@ -58,7 +58,7 @@ body {
   animation: bounce 2s infinite;
 }
 .down-arrow a {
-  color: #C38D9E;
+  color: #b16c82;
   cursor: pointer;
   transition: all .2s ease-in-out;
   -webkit-transition: all .2s ease-in-out;
@@ -70,7 +70,7 @@ body {
 }
 
 .second-container {
-  background: linear-gradient(to top right, #E8A87C, #85CDCA);
+  background: linear-gradient(to bottom, #E8A87C, #84C7BE);
   display: flex;
   height: 140px;
   justify-content: space-around;
@@ -237,7 +237,7 @@ body {
   animation: bounce 2s infinite;
 }
 .up-arrow a {
-  color: #C38D9E;
+  color: #b16c82;
   cursor: pointer;
   transition: all .2s ease-in-out;
   -webkit-transition: all .2s ease-in-out;
