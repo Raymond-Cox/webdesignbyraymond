@@ -181,7 +181,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 100px;
-  grid-template-areas: "ptitle ptitle" "work1 work2" "work3 work4" "arrow arrow";
+  grid-template-areas: "ptitle ptitle" "work1 work2" "work3 work4" "work5 ." "arrow arrow";
   min-height: calc(100vh - 140px);
   max-width: 100%;
   background: linear-gradient(to right, #84C7BE, #7AC2AC);
@@ -233,13 +233,17 @@ body {
   box-shadow: 10px 10px 30px grey;
 }
 
+.summarypad {
+  height: 75px;
+}
+
 .up-arrow {
   grid-area: arrow;
   display: flex;
   justify-self: center;
   justify-content: center;
-  width: 10%;
   position: relative;
+  width: 10%;
   -webkit-animation: bounce 2s infinite;
   -moz-animation: bounce 2s infinite;
   -o-animation: bounce 2s infinite;
@@ -413,7 +417,7 @@ body {
 
   .portfolio-container {
     grid-template-columns: 100%;
-    grid-template-areas: "ptitle" "work1" "work2" "work3" "work4" "arrow";
+    grid-template-areas: "ptitle" "work1" "work2" "work3" "work4" "work5" "arrow";
   }
 
   .contact-container {

@@ -209,6 +209,7 @@ body {
   "ptitle ptitle"
   "work1 work2"
   "work3 work4"
+  "work5 ."
   "arrow arrow";
   min-height: calc(100vh - 140px);
   max-width: 100%;
@@ -220,6 +221,7 @@ body {
   -moz-transition: .5s all ease-in;
   -o-transition: .5s all ease-in;
 }
+
 .port-title {
   grid-area: ptitle;
   display: flex;
@@ -258,14 +260,16 @@ body {
     }
   }
 }
-
+.summarypad {
+  height: 75px;
+}
 .up-arrow {
   grid-area: arrow;
   display: flex;
   justify-self: center;
   justify-content: center;
-  width: 10%;
   position: relative;
+  width: 10%;
   -webkit-animation: bounce 2s infinite;
   -moz-animation: bounce 2s infinite;
   -o-animation: bounce 2s infinite;
@@ -459,6 +463,7 @@ body {
     "work2"
     "work3"
     "work4"
+    "work5"
     "arrow";
   }
   .contact-container {
