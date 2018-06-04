@@ -209,7 +209,7 @@ body {
   "ptitle ptitle"
   "work1 work2"
   "work3 work4"
-  "work5 ."
+  "work5 work6"
   "arrow arrow";
   min-height: calc(100vh - 140px);
   max-width: 100%;
@@ -464,6 +464,7 @@ body {
     "work3"
     "work4"
     "work5"
+    "work6"
     "arrow";
   }
   .contact-container {
@@ -491,6 +492,9 @@ body {
   .social-media-container {
     width: 95%;
   }
+  .summarypad {
+  height: auto;
+}
 }
 
 @keyframes bounce {

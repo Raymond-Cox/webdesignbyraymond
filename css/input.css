@@ -181,7 +181,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 100px;
-  grid-template-areas: "ptitle ptitle" "work1 work2" "work3 work4" "work5 ." "arrow arrow";
+  grid-template-areas: "ptitle ptitle" "work1 work2" "work3 work4" "work5 work6" "arrow arrow";
   min-height: calc(100vh - 140px);
   max-width: 100%;
   background: linear-gradient(to right, #84C7BE, #7AC2AC);
@@ -417,7 +417,7 @@ body {
 
   .portfolio-container {
     grid-template-columns: 100%;
-    grid-template-areas: "ptitle" "work1" "work2" "work3" "work4" "work5" "arrow";
+    grid-template-areas: "ptitle" "work1" "work2" "work3" "work4" "work5" "work6" "arrow";
   }
 
   .contact-container {
@@ -441,6 +441,10 @@ body {
 
   .social-media-container {
     width: 95%;
+  }
+
+  .summarypad {
+    height: auto;
   }
 }
 @keyframes bounce {
