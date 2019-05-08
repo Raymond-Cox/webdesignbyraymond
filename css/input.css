@@ -219,6 +219,7 @@ body {
 }
 .work-container img {
   height: auto;
+  max-height: 450px;
   width: 100%;
   -webkit-transition: all .3s ease-in;
   -moz-transition: all .3s ease-in;
@@ -238,12 +239,12 @@ body {
 }
 
 .up-arrow {
-  grid-area: arrow;
+  /* grid-area: arrow; */
   display: flex;
-  justify-self: center;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: flex-end;
   position: relative;
-  width: 10%;
+  width: 100%;
   -webkit-animation: bounce 2s infinite;
   -moz-animation: bounce 2s infinite;
   -o-animation: bounce 2s infinite;
